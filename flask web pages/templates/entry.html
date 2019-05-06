@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block body %}
+            <h2>{{the_title}}</h2>
+            <form action="/search4" method="POST">
+                <table>
+                    <p>Use this form to submit search request!</p>
+                    <tr><td>phrase:</td><td><input type="text" name="phrase" required></td></tr>
+                    <tr><td>Letters:</td><td><input type="text" name="letters" value="aeiou"></td></tr>
+                </table>
+                <p>when you are ready click this button:</p>
+                <input type="submit" value="do it">
+            </form>
+{% endblock %}

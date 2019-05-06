@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <h1>{{ the_title }}</h1>
+        <table>
+            <tr>
+                {% for row_title in row_titles %}
+                <th>{{ row_title }}</th>
+                {% endfor %}
+            </tr>
+            {% for line in the_data %}
+            <tr>
+                {% for item in line %}
+                    <td>{{ item }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+{% endblock %}
