@@ -5,7 +5,9 @@ from DBcm import UseDatabsase, ConnectionError, CredentialsError, SQLError
 from checker import check_logged_in
 from threading import Thread
 
-
+def search4letters(pharse:str, letters:str='aeiou')->set:
+    """Returns the set of 'letters' that found in 'pharse'."""
+    return set(pharse).intersection(set(letters))
 app = Flask(__name__)
 
 app.secret_key = 'YouWillNeverGuss'
